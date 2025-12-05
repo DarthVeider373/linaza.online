@@ -70,20 +70,27 @@
 
     /* Header principal */
     header {
-      padding: 30px 20px 20px;
+      padding: 40px 20px 24px;
       border-bottom: 1px solid #eee;
     }
 
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
     header h1 {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
       margin-bottom: 8px;
     }
 
     header p {
-      font-size: 14px;
-      color: #666;
-      text-transform: uppercase;
+      font-size: 15px;
+      color: #777;
+      text-transform: none;
+      line-height: 1.4;
+      margin-top: 4px;
     }
 
     /* Área do vídeo */
@@ -107,6 +114,13 @@
       align-items: center;
       color: #fff;
       font-size: 18px;
+    }
+
+    .sound-hint {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #444;
+      text-align: center;
     }
 
     /* Footer */
@@ -139,7 +153,11 @@
 
     @media (max-width: 600px) {
       header {
-        padding: 24px 16px 16px;
+        padding: 28px 16px 18px;
+      }
+
+      .header-inner {
+        max-width: 100%;
       }
 
       header h1 {
@@ -158,6 +176,10 @@
       .video-placeholder {
         height: 65vh;
         font-size: 16px;
+      }
+
+      .sound-hint {
+        font-size: 13px;
       }
     }
 
@@ -182,7 +204,7 @@
 
   <!-- Topo estilo Univision -->
   <div class="top">
-    <!-- SUBSTITUA ESTA DIV PELA IMAGEM REAL DO LOGO DA UNIVISION -->
+    <!-- SUBSTITUA ESTA IMAGEM PELO LOGO REAL DA UNIVISION, SE QUISER -->
     <img src="favicon.ico" alt="Univision" class="logo-img">
     <div class="logo-text">UNIVISION</div>
     <div class="menu"></div>
@@ -190,18 +212,22 @@
 
   <!-- Cabeçalho semelhante ao do Dr. Juan Rivera -->
   <header>
-    <h1><strong>Dr. Juan Rivera</strong></h1>
-    <p style="font-size:15px; color:#777; text-transform:none; line-height:1.4; margin-top:6px;">
-      Nuevo truco con linaza de 15 segundos libera gases y destapa el intestino estreñido - sin laxantes.
-    </p>
+    <div class="header-inner">
+      <h1><strong>Nuevo truco con linaza de 15 segundos libera gases y destapa el intestino estreñido - sin laxantes.</strong></h1>
+      <p>
+        Dr. Juan Rivera
+      </p>
+    </div>
   </header>
 
-  <!-- Área do vídeo (VTurb será inserido aqui depois) -->
+  <!-- Área do vídeo (VTurb) -->
   <main>
     <div class="video-box">
       <!-- COLE AQUI O CÓDIGO DO VTURB -->
       <vturb-smartplayer id="vid-6917ee97a9e1550a6576befb" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
       <script type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/60b2de82-89bd-4e79-a03f-d206fb6f5a6b/players/6917ee97a9e1550a6576befb/v4/player.js", s.async = !0, document.head.appendChild(s); </script>
+
+      <p class="sound-hint">🔊 Verifica si el sonido está activado.</p>
     </div>
   </main>
 
